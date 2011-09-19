@@ -6,13 +6,13 @@
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
  *
- * VERSION: 0.2
+ * VERSION: 0.3
  */
 
 // Set date from an ISO8601 string
 // Taken from http://delete.me.uk/2005/03/iso8601.html by Paul Sowden
-if (!('setISO8601' in Date.prototype)) {
-	Date.prototype.setISO8601 = function (string) {
+if (!('setISO' in Date.prototype)) {
+	Date.prototype.setISO = function (string) {
 		var regexp = "([0-9]{4})(-([0-9]{2})(-([0-9]{2})"
 				+ "(T([0-9]{2}):([0-9]{2})(:([0-9]{2})(\.([0-9]+))?)?"
 				+ "(Z|(([-+])([0-9]{2}):([0-9]{2})))?)?)?)?",
@@ -39,8 +39,8 @@ if (!('setISO8601' in Date.prototype)) {
 
 // Get an ISO8601 string-representation from the date object
 // Taken from https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date#Example:_ISO_8601_formatted_dates
-if (!('getISO8601' in Date.prototype)) {
-	Date.prototype.getISO8601 = function() {
+if (!('getISO' in Date.prototype)) {
+	Date.prototype.getISO = function() {
 		function pad(n) { return n < 10 ? '0' + n : n; }
 
 		return this.getUTCFullYear() + '-'

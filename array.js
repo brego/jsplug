@@ -5,6 +5,8 @@
  * This file plugs holes in the Array object.
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
+ *
+ * VERSION: 0.2
  */
 
 // Add ECMA262-5 Array methods if not supported natively

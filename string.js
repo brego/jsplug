@@ -5,6 +5,8 @@
  * This file plugs holes in the String object.
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
+ *
+ * VERSION: 0.2
  */
 
 // Add ECMA262-5 string trim if not supported natively

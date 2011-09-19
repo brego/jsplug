@@ -5,6 +5,8 @@
  * This file plugs holes in the Date object.
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
+ *
+ * VERSION: 0.2
  */
 
 // Set date from an ISO8601 string

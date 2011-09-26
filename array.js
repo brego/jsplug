@@ -6,7 +6,7 @@
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
  *
- * VERSION: 0.2
+ * VERSION: 0.4
  */
 
 // Add ECMA262-5 Array methods if not supported natively

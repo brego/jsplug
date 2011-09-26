@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="http://code.jquery.com/qunit/git/qunit.js"></script>
+
+		<script>
+			(function() {
+				var files = new Array;
+				for (var i = 0, total = 0, length = arguments.length; i < length; i++) {
+					document.write(unescape('%3Cscript src="../' + arguments[i] + '.js"%3E%3C/script%3E'));
+					document.write(unescape('%3Cscript src="' + arguments[i] + '.test.js"%3E%3C/script%3E'));
+				}
+			})(
+				'array',
+				'cookie',
+				'date',
+				'function',
+				'object',
+				'regexp',
+				'string'
+			);
+		</script>
+
+	</head>
+	<body>
+		<h1 id="qunit-header">jsplug tests</h1>
+		<h2 id="qunit-banner"></h2>
+		<div id="qunit-testrunner-toolbar"></div>
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
+		<div id="qunit-fixture">test markup, will be hidden</div>
+	</body>
+</html>

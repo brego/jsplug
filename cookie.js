@@ -11,7 +11,7 @@
 
 // Taken from http://www.quirksmode.org/js/cookies.html
 if (typeof(createCookie) !== 'function') {
-	function createCookie(name, value, days) {
+	window.createCookie = function(name, value, days) {
 		if (days) {
 			var date = new Date();
 			date.setTime(date.getTime() + (days*24*60*60*1000));
@@ -25,7 +25,7 @@ if (typeof(createCookie) !== 'function') {
 
 // Taken from http://www.quirksmode.org/js/cookies.html
 if (typeof(readCookie) !== 'function') {
-	function readCookie(name) {
+	window.readCookie = function(name) {
 		var nameEQ = name + "=",
 			ca     = document.cookie.split(';');
 		for (var i = 0; i < ca.length; i++) {
@@ -43,7 +43,7 @@ if (typeof(readCookie) !== 'function') {
 
 // Taken from http://www.quirksmode.org/js/cookies.html
 if (typeof(eraseCookie) !== 'function') {
-	function eraseCookie(name) {
-		createCookie(name,"",-1);
+	window.eraseCookie = function(name) {
+		createCookie(name, "", -1);
 	}
 }

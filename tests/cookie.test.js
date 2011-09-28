@@ -1,41 +1,45 @@
-$(function(){
+$(function() {
 
 	module('Cookie');
-
-	test('createCookie', function() {
+	
+	test('Cookie', function() {
+		ok(Cookie, "Cookie");
+		ok(window.Cookie, "window.Cookie");
+	})
+	
+	test('Cookie.set', function() {
 		expect(2);
 		
-		ok(window.createCookie, "window.createCookie");
-		createCookie('test_name', 'test_val', 10)
-		equal(document.cookie, "test_name=test_val", "createCookie('test_name', 'test_val', 10)");
+		ok(Cookie.set, "Cookie.set");
+		Cookie.set('test_name', 'test_val', 10)
+		equal(document.cookie, "test_name=test_val", "Cookie.set('test_name', 'test_val', 10)");
 		document.cookie = "";
 	});
 	
-	test('readCookie', function() {
+	test('Cookie.get', function() {
 		expect(2);
 		
 		var date = new Date();
 		date.setTime(date.getTime() + (10*24*60*60*1000));
 		var expires = "; expires=" + date.toUTCString();
 		
-		ok(window.readCookie, "window.readCookie");
+		ok(Cookie.get, "Cookie.get");
 		document.cookie = "test_name=test_val" + expires + "; path=/";
-		equal(readCookie('test_name'), "test_val", "readCookie('test_name')");
+		equal(Cookie.get('test_name'), "test_val", "Cookie.get('test_name')");
 		document.cookie = "";
 	});
 	
-	test('eraseCookie', function() {
+	test('Cookie.delete', function() {
 		expect(2);
-
+	
 		var date = new Date();
 		date.setTime(date.getTime() + (10*24*60*60*1000));
 		var expires = "; expires=" + date.toUTCString();
 		document.cookie = "test_name=test_val" + expires + "; path=/";
-
-		ok(window.eraseCookie, "window.eraseCookie");
-		eraseCookie('test_name');
-		equal(document.cookie, '', "eraseCookie('test_name')");
+	
+		ok(Cookie.delete, "Cookie.delete");
+		Cookie.delete('test_name');
+		equal(document.cookie, '', "Cookie.delete('test_name')");
 		document.cookie = "";
 	});
-
 });

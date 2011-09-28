@@ -6,7 +6,7 @@
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
  *
- * VERSION: 0.4
+ * VERSION: 0.6
  */
 
 // Taken from http://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/

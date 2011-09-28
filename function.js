@@ -6,7 +6,7 @@
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
  *
- * VERSION: 0.2
+ * VERSION: 0.6
  */
 
 // Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686

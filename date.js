@@ -6,7 +6,7 @@
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
  *
- * VERSION: 0.3
+ * VERSION: 0.6
  */
 
 // Set date from an ISO8601 string
@@ -18,7 +18,8 @@ if (!('setISO' in Date.prototype)) {
 				+ "(Z|(([-+])([0-9]{2}):([0-9]{2})))?)?)?)?",
 			d      = string.match(new RegExp(regexp)),
 			offset = 0,
-			date   = new Date(d[1], 0, 1);
+			date   = new Date(d[1], 0, 1),
+			time   = null;
 
 		if (d[3])  { date.setMonth(d[3] - 1); }
 		if (d[5])  { date.setDate(d[5]); }

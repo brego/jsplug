@@ -13,15 +13,8 @@
 					document.write(unescape('%3Cscript src="../' + arguments[i] + '.js"%3E%3C/script%3E'));
 					document.write(unescape('%3Cscript src="' + arguments[i] + '.test.js"%3E%3C/script%3E'));
 				}
-			})(
-				'array',
-				'cookie',
-				'date',
-				'function',
-				'object',
-				'regexp',
-				'string'
-			);
+			})('array', 'cookie', 'date', 'function', 'object', 'regexp',
+				'string');
 		</script>
 
 	</head>

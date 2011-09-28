@@ -6,7 +6,7 @@
  *
  * Compiled by Kamil "Brego" Dzieliński 2011 <brego.dk@gmail.com>
  *
- * VERSION: 0.2
+ * VERSION: 0.6
  */
 
 // This escapes a string for use in a regular expression

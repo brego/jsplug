@@ -10,9 +10,10 @@
  */
 
 // Add ECMA262-5 string trim if not supported natively
-// Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
+// Originaly taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
+// New RegEx taken from http://blog.stevenlevithan.com/archives/faster-trim-javascript
 if (!('trim' in String.prototype)) {
 	String.prototype.trim = function() {
-		return this.replace(/^\s+/, '').replace(/\s+$/, '');
+		return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 	}
 }

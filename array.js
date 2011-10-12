@@ -20,7 +20,7 @@ if (!('indexOf' in Array.prototype)) {
 			if (i in this && this[i] === find)
 				return i;
 		return -1;
-	}
+	};
 }
 
 // Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
@@ -33,7 +33,7 @@ if (!('lastIndexOf' in Array.prototype)) {
 			if (i in this && this[i] === find)
 				return i;
 		return -1;
-	}
+	};
 }
 
 // Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
@@ -42,7 +42,7 @@ if (!('forEach' in Array.prototype)) {
 		for (var i = 0, n = this.length; i < n; i++)
 			if (i in this)
 				action.call(that, this[i], i, this);
-	}
+	};
 }
 
 // Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
@@ -53,7 +53,7 @@ if (!('map' in Array.prototype)) {
 		if (i in this)
 			other[i] = mapper.call(that, this[i], i, this);
 		return other;
-	}
+	};
 }
 
 // Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
@@ -64,7 +64,7 @@ if (!('filter' in Array.prototype)) {
 			if (i in this && filter.call(that, v = this[i], i, this))
 				other.push(v);
 		return other;
-	}
+	};
 }
 
 // Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
@@ -74,7 +74,7 @@ if (!('every' in Array.prototype)) {
 			if (i in this && !tester.call(that, this[i], i, this))
 				return false;
 		return true;
-	}
+	};
 }
 
 // Taken from http://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc/2790686#2790686
@@ -84,5 +84,19 @@ if (!('some' in Array.prototype)) {
 			if (i in this && tester.call(that, this[i], i, this))
 				return true;
 		return false;
-	}
+	};
+}
+
+// Taken from http://ejohn.org/blog/fast-javascript-maxmin/
+if (!('max' in Array.prototype)) {
+	Array.prototype.max = function(){
+		return Math.max.apply(Math, this);
+	};
+}
+
+// Taken from http://ejohn.org/blog/fast-javascript-maxmin/
+if (!('min' in Array.prototype)) {
+	Array.prototype.min = function(){
+		return Math.min.apply(Math, this);
+	};
 }

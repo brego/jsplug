@@ -10,6 +10,7 @@
  */
 
 // Taken from http://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/
+// Object.toType(var)
 if (typeof Object.toType != 'function') {
 	Object.toType = (function toType(global) {
 		return function(obj) {
@@ -21,7 +22,8 @@ if (typeof Object.toType != 'function') {
 	})(this);
 }
 
-//Taken from http://javascriptweblog.wordpress.com/2011/02/28/javascript-object-keys-finally/
+// Taken from http://javascriptweblog.wordpress.com/2011/02/28/javascript-object-keys-finally/
+// Object.keys(object)
 if (typeof Object.keys != 'function') {
 	Object.keys = function(object) {
 		if (typeof obj != "object" && typeof object != "function" || object == null) {
